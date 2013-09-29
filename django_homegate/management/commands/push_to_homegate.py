@@ -10,8 +10,8 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         '''
         '''
-        project_label, app_label, _, class_name = settings.HOMEGATE_REAL_ESTATE_MODEL.split('.')
-        RealEstateModel = get_model(project_label + "." + app_label, class_name)
+        app_label, _, class_name = settings.HOMEGATE_REAL_ESTATE_MODEL.split('.')
+        RealEstateModel = get_model(app_label, class_name)
         rems = RealEstateModel.objects.ready_to_push()
         objs = []
         for rem in rems:
