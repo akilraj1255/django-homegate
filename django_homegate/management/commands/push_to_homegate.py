@@ -17,7 +17,7 @@ class Command(BaseCommand):
         for rem in rems:
             objs.append(rem.get_idx_record())
         
-        hg = Homegate(settings.HOMEGATE_AGANCY_ID, 
+        hg = Homegate(settings.HOMEGATE_AGENCY_ID, 
                 host=settings.HOMEGATE_HOST, 
                 username=settings.HOMEGATE_USERNAME, 
                 password=settings.HOMEGATE_PASSWORD)
