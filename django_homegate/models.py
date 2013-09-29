@@ -2,4 +2,21 @@
 # from django.db import models
 # from django.utils.translation import ugettext_lazy as _
 
-# TODO: add example for custom manager and get_idx_record()
+
+
+#class RealEstateManager(models.Manager):
+#    def ready_to_push(self, keyword):
+#        return self.filter(status=self.READY_TO_PUSH_PUBLISH)
+
+#class RealEstate(models.Model):
+#    ...
+#    status = ...
+#    objects = RealEstateManager()
+#   
+#    def get_idx_record(self):
+#        from homegate import IdxRecord
+#        rec = IdxRecord()
+#        rec.update({...})
+#        return rec
+
+

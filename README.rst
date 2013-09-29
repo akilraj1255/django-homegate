@@ -39,22 +39,26 @@ Usage
 
 django-homegate is a helper app providing a management command to push the new records to Homegate using the API implementation of python-homegate (https://github.com/arteria/python-homegate). If you install from  PyPi, this package will be installed as dependency.
 
-To connect you real estate model, register your model in the settings and implement a model manager method that returns all records (real estate objects) to push to Homegate. In addition, a `get_idx_record()` method must be implemented on your real estate model to get access to the data to push to Homegate. There is an example provided in `django_homegate/models.py`. 
+To connect you real estate model, register your model in the settings and implement a model manager method that returns all records (real estate objects) to push to Homegate. In addition, a ``get_idx_record()`` method must be implemented on your real estate model to get access to the data to push to Homegate. There is an example provided in ``django_homegate/models.py``. 
 
-To register the model do not forget to set the app label in your real estate model, eg. '<real-estate>', and in your settings.py add `HOMEGATE_REAL_ESTATE = '<your-app>.<real-estate>'`.
+To register the model do not forget to set the app label in your real estate model, eg. '<real-estate>', and in your settings.py add ``HOMEGATE_REAL_ESTATE = '<your-app>.<real-estate>'``.
 
 
-The manager method name is 'ready_to_push()', so
+The manager method name is ``ready_to_push()``, so
 	
+.. code-block:: python
+
 	>>> objs = RealEstate.objects.ready_to_push()
 	
-will return a QuerySet containing all real estate objects to publish to Homegate. There is an example provided in `django_homegate/models.py` as well. 
+will return a QuerySet containing all real estate objects to publish to Homegate. There is an example provided in ``django_homegate/models.py`` as well. 
 
 
 
 For more info about model managers and app labeling see:
-* http://www.djangobook.com/en/2.0/chapter10.html 
-* https://docs.djangoproject.com/en/dev/ref/models/options/#django.db.models.Options.app_label
+
+http://www.djangobook.com/en/2.0/chapter10.html 
+
+https://docs.djangoproject.com/en/dev/ref/models/options/#django.db.models.Options.app_label
 
 
 Contribute
