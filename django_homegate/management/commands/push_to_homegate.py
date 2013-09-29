@@ -23,5 +23,9 @@ class Command(BaseCommand):
                 username=settings.HOMEGATE_USERNAME, 
                 password=settings.HOMEGATE_PASSWORD)
         hg.push(objs)
+        
+        for rem in rems:
+            rem.published_idx_record()
+        
         del hg # good bye
         

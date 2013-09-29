@@ -13,6 +13,10 @@
 #    status = ...
 #    objects = RealEstateManager()
 #   
+#    def published_idx_record(self):
+#        self.status = self.PUBLISHED
+#        self.save()
+#
 #    def get_idx_record(self):
 #        from homegate import IdxRecord
 #        rec = IdxRecord()

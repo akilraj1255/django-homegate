@@ -37,7 +37,7 @@ Usage
 
 django-homegate is a helper app providing a management command to push the new records to Homegate using the API implementation of python-homegate (https://github.com/arteria/python-homegate). If you install from  PyPi, this package will be installed as dependency.
 
-To connect you real estate model, register your model in the settings and implement a model manager method that returns all records (real estate objects) to push to Homegate. In addition, a ``get_idx_record()`` method must be implemented on your real estate model to get access to the data to push to Homegate. There is an example provided in ``django_homegate/models.py``. 
+To connect you real estate model, register your model in the settings and implement a model manager method that returns all records (real estate objects) to push to Homegate. In addition, a ``get_idx_record()`` and ``published_idx_record()`` method must be implemented on your real estate model to get access to the data to push to Homegate and to update the status of the record. There is an example provided in ``django_homegate/models.py``. 
 
 To register the model do not forget to set the app label in your real estate model, eg. '<real-estate>', and in your settings.py add ``HOMEGATE_REAL_ESTATE_MODEL = '<your-app>.<real-estate>'``.
 
