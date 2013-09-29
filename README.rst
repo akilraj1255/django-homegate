@@ -11,16 +11,14 @@ To get the latest stable release from PyPi
 
 .. code-block:: bash
 
-    $ pip install django-homegate
-
+    $ TODO
+	
 To get the latest commit from GitHub
 
 .. code-block:: bash
 
-    $ pip install -e git+git://github.com/arteria/django-homegate.git#egg=django_homegate
-
-TODO: Describe further installation steps (edit / remove the examples below):
-
+    $ pip install -e git+git://github.com/arteria/django-homegate.git#egg=django_homegate 
+	
 Add ``django_homegate`` to your ``INSTALLED_APPS``
 
 .. code-block:: python
@@ -41,7 +39,7 @@ django-homegate is a helper app providing a management command to push the new r
 
 To connect you real estate model, register your model in the settings and implement a model manager method that returns all records (real estate objects) to push to Homegate. In addition, a ``get_idx_record()`` method must be implemented on your real estate model to get access to the data to push to Homegate. There is an example provided in ``django_homegate/models.py``. 
 
-To register the model do not forget to set the app label in your real estate model, eg. '<real-estate>', and in your settings.py add ``HOMEGATE_REAL_ESTATE = '<your-app>.<real-estate>'``.
+To register the model do not forget to set the app label in your real estate model, eg. '<real-estate>', and in your settings.py add ``HOMEGATE_REAL_ESTATE_MODEL = '<your-app>.<real-estate>'``.
 
 
 The manager method name is ``ready_to_push()``, so
@@ -52,6 +50,8 @@ The manager method name is ``ready_to_push()``, so
 	
 will return a QuerySet containing all real estate objects to publish to Homegate. There is an example provided in ``django_homegate/models.py`` as well. 
 
+
+In ``settings.py`` add ``HOMEGATE_AGENCY_ID = '<your-agency-id>'``,  ``HOMEGATE_HOST = '<homegate-host>'``, ``HOMEGATE_USERNAME = '<your-username>'`` and  ``HOMEGATE_PASSWORD = '<your-password>'``.
 
 
 For more info about model managers and app labeling see:
