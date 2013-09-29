@@ -2,8 +2,7 @@ from django.core.management.base import BaseCommand, CommandError
 from django.db.models import get_model
 from django.conf import settings
 
-from homegate import Homegate
-
+from homegate.homegate import Homegate
 
 class Command(BaseCommand):
     help = 'Collect all real estate model and it\'s IDX records to push to Homegate.'
