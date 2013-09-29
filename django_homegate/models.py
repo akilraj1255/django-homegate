@@ -3,10 +3,10 @@
 # from django.utils.translation import ugettext_lazy as _
 
 
-
+#READY_TO_PUSH_PUBLISH = 10
 #class RealEstateManager(models.Manager):
-#    def ready_to_push(self, keyword):
-#        return self.filter(status=self.READY_TO_PUSH_PUBLISH)
+#    def ready_to_push(self):
+#        return self.filter(status=READY_TO_PUSH_PUBLISH)
 
 #class RealEstate(models.Model):
 #    ...
