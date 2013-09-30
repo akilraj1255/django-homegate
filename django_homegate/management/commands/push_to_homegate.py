@@ -5,7 +5,7 @@ from django.conf import settings
 from homegate.homegate import Homegate
 
 class Command(BaseCommand):
-    help = 'Collect all real estate model and it\'s IDX records to push to Homegate.'
+    help = 'Collect all real estate objects and it\'s IDX records to push to Homegate.'
 
     def handle(self, *args, **options):
         '''
