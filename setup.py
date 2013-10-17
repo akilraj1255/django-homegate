@@ -47,7 +47,7 @@ setup(
     platforms=['OS Independent'],
     keywords='django, homegate, python, real estate, property',
     author='arteria GmbH',
-    author_email='admin.ch',
+    author_email='admin@arteria.ch',
     url="https://github.com/arteria/django-homegate",
     packages=find_packages(),
     include_package_data=True,
