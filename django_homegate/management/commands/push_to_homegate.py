@@ -5,7 +5,7 @@ from django.conf import settings
 from homegate.homegate import Homegate
 
 class Command(BaseCommand):
-    help = 'Collect all real estate objects and it\'s IDX records to push to Homegate.'
+    help = 'Collect all real estate objects and it\'s IDX records to sync with Homegate.'
 
     def handle(self, *args, **options):
         '''
@@ -22,9 +22,6 @@ class Command(BaseCommand):
                 username=settings.HOMEGATE_USERNAME, 
                 password=settings.HOMEGATE_PASSWORD)
         hg.push(objs)
-        
-        for rem in rems:
-            rem.published_idx_record()
         
         del hg # good bye
         
